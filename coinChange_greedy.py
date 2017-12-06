@@ -26,10 +26,6 @@ def coinChangeDynamic(money, coins):
                     possibilities = []
                     for k in range((j // coins[i])+1):
                         value = matrix[i-1][j-k*coins[i]] + k
-                        #print("Um", j, "Geld zu wechseln, nutzen wir", k, " mal die Muenze", coins[i])
-                        #print(j-k*coins[i], "weniger angucken")
-                        #print("Hierfuer werden Muenzen gebraucht: ", matrix[i-1][j-k*coins[i]])
-                        #print("zusammen benoetigt man Muenzen: ", value)
                         possibilities.append(value)
                     listForCoin.append(min(possibilities))
             matrix.append(listForCoin)
